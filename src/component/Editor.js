@@ -1,3 +1,4 @@
+import "../style/Editor.scss"
 const Editor = (props) => {
   return (
     <div className="w-100 p-3">

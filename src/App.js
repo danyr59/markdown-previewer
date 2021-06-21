@@ -3,7 +3,6 @@ import React from "react";
 import Toolbar from "./component/Toolbar.js";
 import Editor from "./component/Editor.js";
 import Preview from "./component/Preview.js";
-import marked from "./services/marked.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -48,7 +47,7 @@ class App extends React.Component {
       : ["editorwrap", "previewwrap"];
     return (
       <div className="mt-5 App App-header">
-        <div className={"ambos" + " " + states[0]}>
+        <div className={`ambos ${states[0]}`}>
           <Toolbar
             text={"Editor"}
             onClick={this.handlerEditorMaximize}
@@ -59,7 +58,7 @@ class App extends React.Component {
             markdown={this.state.markdown}
           />
         </div>
-        <div className={"ambos" + " " + states[1]}>
+        <div className={`ambos ${states[1]}`}>
           <Toolbar
             text={"Previewer"}
             onClick={this.handlerPreviewerMaximize}

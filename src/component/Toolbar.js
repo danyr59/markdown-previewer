@@ -1,3 +1,4 @@
+import "../style/Toolbar.scss";
 const Toolbar = (props) => {
   console.log(props.clases);
   return (
@@ -7,7 +8,7 @@ const Toolbar = (props) => {
       </i>
 
       <i
-        className={props.clases + " " + "p-2 bd-highlight "}
+        className={`${props.clases} p-2 bd-highlight`}
         onClick={props.onClick}
       ></i>
     </div>
