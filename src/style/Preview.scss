@@ -1,0 +1,40 @@
+.negro{
+    color: black;
+} 
+code{
+    background-color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+pre{
+    background:white;
+    overflow: auto;
+    display: block;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 1.2;
+    code{
+        margin: 1px;
+        font-size: 0.875rem;
+        font-weight: bold;
+    }
+}
+.ajustes{
+    line-height: 1.7;
+}
+@for $i from 1 through 2 {
+  .border-#{$i} {border-bottom: 10px/$i solid #224b4b; }
+  
+}
+h3{
+    line-height: 1.5 !important;
+    margin-top:15px !important;
+    font-size: calc(1.1rem + .6vw) !important;
+}
+p{
+    font-size: calc(0.8rem + .6vw) !important;
+}/*
+blockquote{
+    @extend .blockquote;
+}*/

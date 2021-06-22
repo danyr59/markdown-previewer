@@ -1,0 +1,22 @@
+.toolbar {
+    display: flex;
+    align-items: center;
+    background-color: #4aa3a3;
+    height: 51px;
+    padding-left: 0.3rem;
+    border: 1px solid #1d2f2f;
+    box-shadow: 1px 1px 10px 2px #3a5f5f;
+    font-family: Russo One;
+    font-size: 1rem;
+    color: black;
+}
+.icono{
+    float:right;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    min-height: 5px;
+    height: 50px;
+}

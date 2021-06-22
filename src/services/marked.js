@@ -1,7 +1,6 @@
 import marked from "marked/marked.min.js";
 import Prism from "prismjs";
 import "prismjs/themes/prism.css";
-
 marked.setOptions({
   breaks: true,
   highlight: (code) => {
@@ -14,7 +13,10 @@ const renderer = {
     return `<a target="_blank" href="${href}">${text}</a>`;
   },
   heading(text, level, raw, slugger) {
-    return `<h${level} class="hola">${text}</h${level}>`;
+    return `<h${level} class="h${level} border-${level}">${text}</h${level}>`;
+  },
+  image(href, title, text) {
+    return `<img src="${href}"  class="img-fluid" alt="${text}" >`;
   },
 };
 console.log({ renderer });

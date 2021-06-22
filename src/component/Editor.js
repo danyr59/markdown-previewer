@@ -1,9 +1,9 @@
-import "../style/Editor.scss"
+import "../style/Editor.scss";
 const Editor = (props) => {
   return (
-    <div className="w-100 p-3">
+    <div className="w-100 h-100">
       <textarea
-        className="w-100 "
+        className="ajuste w-100 width-ajuste"
         id="editor"
         onChange={props.onChange}
         type="text"

@@ -41,13 +41,13 @@ class App extends React.Component {
     //position 0 than handler the editor
     //position 1 than handler the preview
     let states = this.state.editormaximized
-      ? ["editorwrap maximazed", "previewwrap d-none"]
+      ? ["editorWrap maximazed", "previewWrap d-none"]
       : this.state.previewermaximized
-      ? ["editorwrap d-none", "previewwrap maximazed"]
-      : ["editorwrap", "previewwrap"];
+      ? ["editorWrap d-none", "previewWrap maximazed"]
+      : ["editorWrap", "previewWrap"];
     return (
-      <div className="mt-5 App App-header">
-        <div className={`ambos ${states[0]}`}>
+      <div className="App colorScheme">
+        <div className={`containers ${states[0]}`}>
           <Toolbar
             text={"Editor"}
             onClick={this.handlerEditorMaximize}
@@ -58,7 +58,7 @@ class App extends React.Component {
             markdown={this.state.markdown}
           />
         </div>
-        <div className={`ambos ${states[1]}`}>
+        <div className={`containers ${states[1]}`}>
           <Toolbar
             text={"Previewer"}
             onClick={this.handlerPreviewerMaximize}
@@ -72,42 +72,42 @@ class App extends React.Component {
 }
 
 export default App;
-const placeholder = `# welcome to my react markdown previewer!
+const placeholder = `# Welcome to my React Markdown Previewer!
 
-## this is a sub-heading...
-### and here's some other cool stuff:
+## This is a sub-heading...
+### And here's some other cool stuff:
 
-heres some code, \`<div></div>\`, between 2 backticks.
+Heres some code, \`<div></div>\`, between 2 backticks.
 
 \`\`\`
 // this is multi-line code:
 
-function anotherexample(firstline, lastline) {
-  if (firstline == '\`\`\`' && lastline == '\`\`\`') {
-    return multilinecode;
+function anotherExample(firstLine, lastLine) {
+  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
+    return multiLineCode;
   }
 }
 \`\`\`
 
-you can also make text **bold**... whoa!
-or _italic_.
-or... wait for it... **_both!_**
-and feel free to go crazy ~~crossing stuff out~~.
+You can also make text **bold**... whoa!
+Or _italic_.
+Or... wait for it... **_both!_**
+And feel free to go crazy ~~crossing stuff out~~.
 
-there's also [links](https://www.freecodecamp.org), and
-> block quotes!
+There's also [links](https://www.freecodecamp.org), and
+> Block Quotes!
 
-and if you want to get really crazy, even tables:
+And if you want to get really crazy, even tables:
 
-wild header | crazy header | another header?
+Wild Header | Crazy Header | Another Header?
 ------------ | ------------- | -------------
-your content can | be here, and it | can be here....
-and here. | okay. | i think we get it.
+Your content can | be here, and it | can be here....
+And here. | Okay. | I think we get it.
 
-- and of course there are lists.
-  - some are bulleted.
-     - with different indentation levels.
-        - that look like this.
+- And of course there are lists.
+  - Some are bulleted.
+     - With different indentation levels.
+        - That look like this.
 
 
 1. And there are numbered lists too.
